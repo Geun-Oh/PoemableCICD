@@ -1,0 +1,524 @@
+/*스타일 작성해야 할 컴포넌트: poemCard, Modal*/
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Myeongjo&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Gowun+Batang&display=swap');
+
+$defaultColor: #6666CC;
+$fontFamily: 'Nanum Myeongjo', serif;
+$indexPageFontFamily: 'Gowun Batang', serif;
+
+.nav {
+    z-index: 999;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 150px;
+    position: absolute;
+    font-family: $fontFamily;
+    div {
+        width: 100vw;
+        font-size: 90px;
+        text-align: center;
+    }
+    p {
+        position: absolute;
+        top: 20px;
+        right: 40px;
+    }
+    @media screen and (max-width: 768px) {
+        display: none;
+    }
+}
+
+.introPage {
+    font-family: $indexPageFontFamily;
+    width: 100vw;
+    height: auto;
+    position: relative;
+    .section1 {
+        position: sticky;
+        top: 0;
+        z-index: 1;
+        div {
+            width: 600px;
+            height: 540px;
+            font-size: 120px;
+            font-weight: 400;
+            margin-top: 10vh;
+            margin-left: 10vw;
+            p {
+                margin: 0;
+            }
+        }
+        p {
+            margin: 0;
+            margin-left: 50vw;
+            margin-bottom: 25vh;
+            font-size: 80px;
+        }
+    }
+    .section2 {
+        width: 100vw;
+        background-color: #6666CC;
+        height: 840px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        z-index: 2;
+        position: relative;
+        p {
+            color: white;
+            text-align: center;
+            margin-top: 60px;
+            font-size: 20px;
+        }
+    }
+    .section3 {
+        width: 100vw;
+        height: 50vh;
+        background-color: white;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        z-index: 2;
+        position: sticky;
+        top: 0;
+        p {
+            font-size: 20px;
+        }
+    }
+    .section4 {
+        width: 100vw;
+        height: 100vh;
+        background: url(./writing.jpg);
+        background-size: cover;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        z-index: 3;
+        position: sticky;
+        top: 0;
+        p {
+            font-size: 50px;
+            color: white;
+        }
+    }
+    .section5 {
+        width: 100vw;
+        height: 3960px;
+        z-index: 4;
+        position: relative;
+        .div {
+            width: 100vw;
+            height: 30vh;
+            background-color: white;
+            position: sticky;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+        p {
+            font-size: 30px;
+        }
+    }
+    .section6 {
+        width: 100vw;
+        height: 100vh;
+        background-color: white;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        position: relative;
+        z-index: 6;
+        p {
+            font-size: 30px;
+        }
+        img {
+            opacity: 0.5;
+            transition-duration: 0.5s;
+            &:hover {
+                opacity: 1;
+            }
+        }
+    }
+    @media screen and (max-width: 768px) {
+        .section1 {
+            div {
+                width: 100vw;
+                height: auto;
+                margin-left: 0;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                p {
+                    width: 70%;
+                    font-size: 50px;
+                }
+            }
+            p {
+                width: 100vw;
+                text-align: center;
+                margin-left: 0;
+                margin-top: 20vh;
+                font-size: 30px;
+            }
+        }
+        .section2 {
+            p {
+                margin-left: 20px;
+                margin-right: 20px;
+                font-size: 20px;
+            }
+        }
+        .section4 {
+            p {
+                font-size: 25px;
+                margin-left: 20px;
+                margin-right: 20px;
+            }
+        }
+        .section5 {
+            p {
+                font-size: 20px;
+            }
+        }
+        .section6 {
+            div {
+                p {
+                    font-size: 20px;
+                }
+                img {
+                    width: 20px;
+                    height: 20px;
+                }
+            }
+        }
+    }
+}
+
+.writingPage {
+    margin-top: 45px;
+    font-size: 24px;
+    font-family: $fontFamily;
+    width: 100vw;
+    height: 90vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    wrapper {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 400px;
+        height: 600px;
+        box-shadow: 2px 2px 20px 5px lightgray;
+        border-radius: 40px;
+        input {
+            border: none;
+            border-bottom: 1px solid lightgray;
+            background-color: none;
+            text-align: center;
+            width: 300px;
+            margin-top: 30px;
+        }
+        div {
+            textarea {
+                font-size: 20px;
+                border: none;
+                text-align: center;
+                width: 400px;
+                height: 450px;
+                margin-top: 20px;
+            }
+        }
+    }
+    @media screen and (max-width: 768px) {
+        margin-top: 90px;
+        wrapper {
+            width: 300px;
+            height: 450px;
+            input {
+                width: 225px;
+                margin-top: 22.5px;
+            }
+            div {
+                textarea {
+                    width: 300px;
+                    height: calc(450px * 0.75);
+                }
+            }
+        }
+    }
+}
+
+.landingPage {
+    font-size: 24px;
+    font-family: $fontFamily;
+    margin-left: calc(50vw - 220px);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition-duration: 0.5s;
+    wrapper {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 450px;
+        height: 600px;
+        box-shadow: 2px 2px 20px 5px lightgray;
+        border-radius: 40px;
+        margin-left: 20px;
+        margin-right: 20px;
+        p {
+            margin: none;
+            margin-top: 30px;
+        }
+        span {
+            font-size: 20px;
+            border: none;
+            text-align: center;
+            width: 400px;
+            height: 450px;
+            margin-top: 20px;
+        }
+    }
+    @media screen and (max-width: 768px) {
+        font-size: 16px;
+        margin-left: calc(50vw - 170px);
+        wrapper {
+            width: 300px;
+            height: 450px;
+            span {
+                width: 270px;
+                font-size: 12px;
+            }
+        }
+    }
+}
+
+.sideNav {
+    width: 200px;
+    height: 100vh;
+    top: 0;
+    left: -180px;
+    background-color: #6666CC;
+    position: fixed;
+    z-index: 999;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    transition-duration: 0.5s;
+    opacity: 0.5;
+    &:hover {
+        transform: translateX(180px);
+        opacity: 1;
+    }
+    hr {
+        width: 50px;
+        color: #ffffff;
+    }
+    p {
+        font-size: 1rem;
+        font-family: $fontFamily;
+        color: #ffffff;
+    }
+    @media screen and (max-width: 768px) {
+        width: 100vw;
+        top: -95vh;
+        left: 0;
+        &:hover {
+            transform: translateY(85vh);
+        }
+    }
+}
+
+.profilePage {
+    width: 60vw;
+    margin-top: 150px;
+    margin-left: 20vw;
+    font-family: $fontFamily;
+    p {
+        font-size: 30px;
+    }
+    .profilePoemList {
+        width: 60vw;
+        position: relative;
+        p {
+            width: calc(60vw - 100px);
+            margin-bottom: 20px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap
+        }
+        wrapper {
+            display: flex;
+            flex-direction: column;
+            position: absolute;
+            top: 0;
+            right: 20px;
+            button {
+                width: 60px;
+                height: 30px;
+                font-size: 12px;
+                border-radius: 5px;
+                border: none;
+                margin-bottom: 10px;
+                opacity: 0.7;
+                transition-duration: 0.5s;
+                cursor: pointer;
+                &:hover {
+                    opacity: 1;
+                }
+            }
+        }
+    }
+    @media screen and (max-width: 768px) {
+        width: 80vw;
+        margin-left: 10vw;
+        p {
+            font-size: 20px;
+        }
+        .profilePoemList {
+            width: 80vw;
+        }
+
+    }
+}
+
+.updateModal {
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: #93939360;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: -999;
+    opacity: 0;
+    wrapper {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 450px;
+        height: 600px;
+        box-shadow: 2px 2px 20px 5px lightgray;
+        border-radius: 40px;
+        margin-left: 20px;
+        margin-right: 20px;
+        background-color: #FFFFFF;
+        p {
+            margin: none;
+            margin-top: 30px;
+        }
+        span {
+            font-size: 20px;
+            border: none;
+            text-align: center;
+            width: 400px;
+            height: 450px;
+            margin-top: 20px;
+        }
+    }
+}
+
+.rightScreen {
+    z-index: 100;
+    position: absolute;
+    top: calc(50vh - 320px);
+    right: 0;
+    width: calc(50vw - 220px);
+    height: 640px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(270.27deg, #FFFFFF 0.23%, #FFFFFF 47.4%, rgba(255, 255, 255, 0.88) 74.36%, rgba(255, 255, 255, 0) 99.76%);
+    img {
+        cursor: pointer;
+        opacity: 0.5;
+        transition-duration: 0.5s;
+        &:hover {
+            opacity: 1;
+        }
+    }
+    @media screen and (max-width: 768px) {
+        height: 100vh;
+        img {
+            transform: translateX(-25px);
+        }
+    }
+}
+
+.leftScreen {
+    z-index: 100;
+    position: absolute;
+    top: calc(50vh - 320px);
+    left: 0;
+    width: calc(50vw - 220px);
+    height: 640px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(90deg, #FFFFFF 0%, #FFFFFF 47.4%, rgba(255, 255, 255, 0.88) 74.48%, rgba(255, 255, 255, 0) 100%);
+    img {
+        cursor: pointer;
+        opacity: 0.5;
+        transition-duration: 0.5s;
+        &:hover {
+            opacity: 1;
+        }
+    }
+    @media screen and (max-width: 768px) {
+        height: 100vh;
+        img {
+            transform: translateX(25px);
+        }
+    }
+}
+
+.button {
+    color: white;
+    border: none;
+    width: 240px;
+    height: 60px;
+    border-radius: 30px;
+    font-size: 20px;
+    font-family: $fontFamily;
+    background-color: $defaultColor;
+    transition-duration: 0.5s;
+    cursor: pointer;
+    &:hover {
+        color: $defaultColor;
+        background-color: white;
+        border: 1px solid $defaultColor;
+    }
+}
+
+.poemCard {
+    font-size: 16px;
+    border: none;
+    resize: none;
+    text-align: center;
+    background-color: white;
+    width: 400px;
+    height: 350px;
+    margin-top: 20px;
+    &:focus {
+        outline: none;
+    }
+    @media screen and (max-width: 768px) {
+        width: 300px;
+        height: calc(350px * 0.75);
+        font-size: 12px;
+    }
+}
